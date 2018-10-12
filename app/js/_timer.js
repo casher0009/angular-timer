@@ -59,7 +59,8 @@ var timerModule = angular.module('timer', [])
         //progress bar
         $scope.displayProgressBar = 0;
         $scope.displayProgressActive = 'active'; //Bootstrap active effect for progress bar
-
+        console.log("sepa???");
+        
         if ($element.html().trim().length === 0) {
           $element.append($compile('<span>' + $interpolate.startSymbol() + 'millis' + $interpolate.endSymbol() + '</span>')($scope));
         } else {
@@ -198,8 +199,9 @@ var timerModule = angular.module('timer', [])
 
         function calculateTimeUnits() {
           var timeUnits = {}; //will contains time with units
-
+          
           if ($attrs.startTime !== undefined){
+            console.log("recuerda quitar los cosole log XD")
             $scope.millis = moment().diff(moment($scope.startTimeAttr));
           }
 
